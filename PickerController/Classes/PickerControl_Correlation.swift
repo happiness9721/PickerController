@@ -99,6 +99,7 @@ extension PickerControl_Correlation: UIPickerViewDelegate {
                 treeNodes = treeNodes?[selectedIndex].nodes
             }
         }
+        guard row < (treeNodes?.count ?? 0) else { return nil }
         return treeNodes?[row].displayName ?? treeNodes?[row].value
     }
     
